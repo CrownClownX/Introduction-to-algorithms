@@ -1,5 +1,5 @@
 # Introduction-to-algorithms
-Implementations of algorithms using C++
+<b>Implementations of algorithms using C++
 
-List of alorithms:
+List of alorithms:</b><br>
   1.Insertion sort
