@@ -3,3 +3,4 @@
 
 List of alorithms:</b><br>
  <pre> 1.Insertion sort 
+ <pre> 2.Merge sort
