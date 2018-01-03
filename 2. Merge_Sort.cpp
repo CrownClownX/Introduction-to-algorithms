@@ -5,7 +5,7 @@
 //r - is the index of the last element in array
 
 template <class T>
-void mergeIt(T*& tab, const int& p, const int& q, const int& r)
+void mergeIt(T tab[], const int& p, const int& q, const int& r)
 {
     int i = p, j = q +1, k = p;
 
@@ -26,7 +26,7 @@ void mergeIt(T*& tab, const int& p, const int& q, const int& r)
 }
 
 template <class T>
-void mergeSort(T*& tab, const int& p, const int& r)
+void mergeSort(T tab[], const int& p, const int& r)
 {
     if(p >= r)
         return;
@@ -50,28 +50,24 @@ int main()
 {
     float fTab[] = {12.32, 4.2, 2.1, 33.6, 6.2334, 776.654, 9.878, 6.04, 23.66, 455.12, 5.66, 3.54, 8.56, 0.1};
     int fMax = sizeof(fTab)/sizeof(float);
-    float * fPtr = fTab;
 
     int iTab[] = {43, 2, 3, 23, 434, 66, 8, 88, 9, 1, 233};
     int iMax = sizeof(iTab)/sizeof(int);
-    int * iPtr = iTab;
 
     long lTab[] = {32323232, 4, 4334, 4567887, 88438, 2122, 374637437, 383848, 283293299, 2312312, 32, 1, 3, 4,5 ,43434, 322, 34435555};
     int lMax = sizeof(lTab)/sizeof(long);
-    long* lPtr = lTab;
 
     std::cout << "INT : " << std::endl;
-    mergeSort(iPtr, 0, iMax-1);
+    mergeSort(iTab, 0, iMax-1);
     showTab(iTab, iMax);
 
     std::cout << "LONG : " << std::endl;
-    mergeSort(lPtr, 0, lMax-1);
+    mergeSort(lTab, 0, lMax-1);
     showTab(lTab, lMax);
 
     std::cout << "FLOAT : " << std::endl;
-    mergeSort(fPtr, 0, fMax-1);
+    mergeSort(fTab, 0, fMax-1);
     showTab(fTab, fMax);
-
 
     return 0;
 }
